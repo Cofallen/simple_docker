@@ -1,0 +1,13 @@
+version: '3'
+services: 
+  test:
+    build: 
+      context: . 
+    container_name: test_name 
+    restart: always 
+    network_mode: host 
+    priviliged: true 
+    devices: 
+      - "/root/.bashrc:/"
+    volumes: 
+      - "/root/test/volume"
